@@ -1,0 +1,4 @@
+[submodule "MSTC_Star"]
+	path = MSTC_Star
+	url = https://github.com/reso1/MSTC_Star.git
+	branch = no_diagonal_motion
