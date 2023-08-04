@@ -14,7 +14,7 @@ from MIP_MCPP.misc import SEP_LITERAL, uv_sorted
 
 
 class Model:
-    """ RMMTC Model """
+    """ MMRTC Model """
 
     def __init__(self, istc:Instance) -> None:
         self.istc = istc
@@ -115,8 +115,8 @@ class Model:
                 self.C_y_defs.append(C_y_def)
 
     def _init_model_params(self, args:dict):
-        """ Use GUROBI to solve the RMMTC instance """
-        model = gp.Model("RMMTC")
+        """ Use GUROBI to solve the MMRTC instance """
+        model = gp.Model("MMRTC")
                 
         model.params.Threads = int(args["Threads"])
         model.params.OptimalityTol = float(args["OptimalityTol"])

@@ -1,5 +1,5 @@
 # MIP-MCPP
-This repository is the implementation of the MIP, MIP-PRH and MIP-SRH models for the rooted min-max tree cover problem and their corresponding planners for the graph-based multi-robot coverage path planning problem from the following paper:
+This repository is the implementation of the MIP, MIP-PRH and MIP-SRH models for the Min-Max Rooted Tree Cover (MMRTC) problem and their corresponding planners for the graph-based multi-robot coverage path planning problem from the following paper:
 
 *Mixed Integer Programming for Time-Optimal Multi-Robot Coverage Path Planning with Efficient Heuristics. Jingtao Tang and Hang Ma. * [[paper]](https://arxiv.org/abs/2306.17609)
 
@@ -16,8 +16,8 @@ Please refer to [[Gurobi]](https://www.gurobi.com/) for the installation. (they 
 
 ## Description
 
-### 1. The RMMTC MIP Solver
-> The MCPP problem is reduced to the RMMTC problem and then solved with the STC algorithm. Please refer to the paper for more details.
+### 1. The MMRTC MIP Solver
+> The MCPP problem is reduced to the MMRTC problem and then solved with the STC algorithm. Please refer to the paper for more details.
 
 #### Usage
 ```bash
@@ -32,7 +32,7 @@ python solver.py [-h] [--solver_cfg SOLVER_CFG] [--alpha ALPHA] [--beta BETA] [-
   - `--warm_start WARM_START`: type of warm-startup for the model optimization. Use 'RTC' for the original MIP model and 'MST' for MIP-PRH and MIP-SRH.
 
 ### 2. The Instance Maker
-A simple routine to create random RMMTC instance.
+A simple routine to create random MMRTC instance.
 - if map is provided, then a terrain with uniform terrain weight of 1 is generated, encoded by:
   - obstacle vertex: black pixel, rgb=(0,0,0)
   - free vertex: white pixel, rgb=(1,1,1)
@@ -69,7 +69,7 @@ python planner.py [-h] [--method METHOD] [--istc_sol_name ISTC_SOL_NAME] [--scal
 
 
 ## MCPP Simulation Results
-- The floor-medium instance using the RMMTC solution from MIP-SRH model
+- The floor-medium instance using the MMRTC solution from MIP-SRH model
 
 ![](figs/floor-medium-MIP.gif)
 

@@ -160,7 +160,7 @@ def mfc_plan(istc: Instance, ax=None, graph_scale=3.0
         for u, v in S.edges():
             sol_edges[r].add((pos2v[u], pos2v[v]))
 
-    paths, weights = STC_on_RMMTC_sol(planner, istc, [sol_edges[pos[r]] for r in istc.R])
+    paths, weights = STC_on_MMRTC_sol(planner, istc, [sol_edges[pos[r]] for r in istc.R])
 
     for i, t in enumerate(paths):
         tx, ty = zip(*t)
@@ -231,7 +231,7 @@ class MIPPlanner(STCPlanner):
         self.H = self.generate_decomposed_graph(G, self.R)
     
     def simulate(self, sol_edges) -> Tuple[List, List]:
-        return STC_on_RMMTC_sol(self, self.istc, sol_edges)
+        return STC_on_MMRTC_sol(self, self.istc, sol_edges)
 
 
 def mip_plan(istc: Instance, sol_edges, ax=None, graph_scale=3.0
@@ -250,7 +250,7 @@ def mip_plan(istc: Instance, sol_edges, ax=None, graph_scale=3.0
     return planner, paths, weights
 
 
-def STC_on_RMMTC_sol(planner:STCPlanner, istc:Instance, sol_edges):
+def STC_on_MMRTC_sol(planner:STCPlanner, istc:Instance, sol_edges):
     pos = nx.get_node_attributes(istc.G, "pos")
     traj, weights = [[] for i in istc.I], [0 for _ in istc.I]
     for i, r in enumerate(istc.R):
