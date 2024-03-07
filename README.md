@@ -1,7 +1,7 @@
 # MIP-MCPP
 This repository is the implementation of the MIP, MIP-PRH and MIP-SRH models for the Min-Max Rooted Tree Cover (MMRTC) problem and their corresponding planners for the graph-based multi-robot coverage path planning problem from the following paper:
 
-*Jingtao Tang and Hang Ma. "Mixed Integer Programming for Time-Optimal Multi-Robot Coverage Path Planning with Heuristics." IEEE Robotics and Automation Letters (Aug. 2023).* [[paper]](https://ieeexplore.ieee.org/abstract/document/10225271), [[video]](https://ieeexplore.ieee.org/ielx7/7083369/10220574/10225271/supp1-3306996.mp4?arnumber=10225271)
+*Jingtao Tang and Hang Ma. "Mixed Integer Programming for Time-Optimal Multi-Robot Coverage Path Planning with Heuristics." IEEE Robotics and Automation Letters (Aug. 2023).* [[paper]](https://ieeexplore.ieee.org/abstract/document/10225271), [[video]](https://ieeexplore.ieee.org/ielx7/7083369/10220574/10225271/supp1-3306996.mp4?arnumber=10225271), [[project]](https://reso1.github.io/blog/posts/grid_mcpp)
 
 Please cite this article if you use this code for the multi-robot coverage path planning problem.
 
